@@ -62,7 +62,7 @@ export default function Sortable<T>(props: SortableProps<T>) {
         const newItems = children.map((v) =>
         props.items.find((item) => (item[props.idField] as string).toString() === v.dataset.id!),
         );
-        
+
         children.splice(event.oldIndex!, 0, event.item);
         event.from.replaceChildren(...children);
         props.setItems(newItems as T[]);
@@ -80,6 +80,7 @@ export default function Sortable<T>(props: SortableProps<T>) {
         props.onEnd?.(event);
       },
     });
+    console.debug("Sortable created:", sortable)
 
     onCleanup(() => {
       sortable.destroy();
