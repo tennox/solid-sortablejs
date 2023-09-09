@@ -82,7 +82,7 @@ export default function Sortable<T>(props: SortableProps<T>) {
         options.onEnd?.(event);
       },
     });
-    console.debug("Sortable created:", sortable)
+    // console.debug("Sortable created:", sortable)
 
     onCleanup(() => {
       sortable.destroy();
