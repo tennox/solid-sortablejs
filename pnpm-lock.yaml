@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  "@types/sortablejs":
+    specifier: ^1.15.0
+    version: 1.15.0
   sortablejs:
     specifier: ^1.15.0
     version: 1.15.0
